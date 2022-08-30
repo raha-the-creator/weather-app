@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 450px;
+    background-color: #EEF6FB;
+    border: solid white 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 15px 0px #000000;
+}
+
+.current {
+    display: flex;
+    flex: 1;
+    border: 1px solid red;
+}
+
+.forecast-cont {
+    display: flex;
+    flex: 1;
+}

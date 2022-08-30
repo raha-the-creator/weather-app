@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Main from "./comps/Main";
 
 function App() {
   const [data, setData] = useState([])
@@ -18,29 +19,15 @@ function App() {
     console.log(data);
   }, [])
 
-  // axios.get(url).then((response) => {
-  //   setData(response.data)
-  //   console.log(response.data)
-  // })
-
-
   return (
     <div className="app">
-      <div className="container">
-        <div className="top">
-          <div className="location">
-            <p>{data.name}</p>
-            <p>{data.main.temp}</p>
-            <img 
-              alt='weather icon'
-              src={`icons/${data.weather[0].icon}.png`}
-            />
-          </div>
-        </div>
-        <div className="bottom">
-          <p>Feels</p>
-        </div>
-      </div>
+      {/* <p>{data.name}</p>
+      <p>{data.main.temp}</p>
+      <img 
+        alt='weather icon'
+        src={`icons/${data.weather[0].icon}.png`}
+      /> */}
+      <Main />
     </div>
   );
 }

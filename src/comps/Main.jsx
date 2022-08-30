@@ -1,10 +1,15 @@
 import React from 'react'
+import "./Main.css"
 
 const Main = () => {
   return (
-    <div>
-      <div></div>
-      <div></div>
+    <div className='container'>
+      <div className='current'>
+        Current Weather: Today
+      </div>
+      <div className='forecast-cont'>
+        Forecast
+      </div>
     </div>
   )
 }
