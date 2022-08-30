@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600&family=Russo+One&display=swap');
 
 body {
   margin: 0;
@@ -8,6 +8,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #EEF6FB;
+  /* position: relative;
+  top: 50%;
+  transform: translateY(-50%); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 code {
