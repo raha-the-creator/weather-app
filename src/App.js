@@ -3,15 +3,18 @@ import axios from "axios";
 
 function App() {
   const [data, setData] = useState([])
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=Burnaby&appid=b2d920699bdff95168ac769bec7938de`
+  const currentURL = `https://api.openweathermap.org/data/2.5/weather?q=Burnaby&appid=b2d920699bdff95168ac769bec7938de`
   
-  const getData = async () => {
-    const { data } = await axios.get(url)
+  const [currentWeather, setCurrentWeather] = useState([])
+  const [forecast, setForecast] = useState([])
+
+  const getCurrentWeather = async () => {
+    const { data } = await axios.get(currentURL)
     setData(data)
   }
 
   useEffect(() => {
-    getData()
+    getCurrentWeather()
     console.log(data);
   }, [])
 
@@ -26,13 +29,12 @@ function App() {
       <div className="container">
         <div className="top">
           <div className="location">
-            <p></p>
+            <p>{data.name}</p>
+            <p>{data.main.temp}</p>
             <img 
-              alt='weather'
+              alt='weather icon'
               src={`icons/${data.weather[0].icon}.png`}
             />
-            <h1>Temp: {data.main.temp}°F</h1>
-            <p>Clouds</p>
           </div>
         </div>
         <div className="bottom">
