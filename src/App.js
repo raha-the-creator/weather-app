@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     getCurrentWeather()
-    console.log(data);
+    // console.log(data);
   }, [])
 
   return (

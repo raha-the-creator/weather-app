@@ -11,11 +11,33 @@
 
 .current {
     display: flex;
+    align-items: center;
+    flex-direction: column;
     flex: 1;
-    border: 1px solid red;
+}
+
+.today {
+    display: flex;
+    flex-direction: row;
+}
+
+.today-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .forecast-cont {
     display: flex;
     flex: 1;
+    flex-direction: row;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border: solid white 6px;
 }
