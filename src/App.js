@@ -10,40 +10,39 @@ import { WEATHER_API_KEY, WEATHER_API_URL } from "./api";
 
 
 function App() {
-  const [data, setData] = useState([]);
-  const [currentWeather, setCurrentWeather] = useState(null);
-  const [forecast, setForecast] = useState(null);
-  const [location, setLocation] = useState('Vancouver')
+  // const [data, setData] = useState([]);
+  // const [currentWeather, setCurrentWeather] = useState(null);
+  // const [forecast, setForecast] = useState(null);
 
-  const currentURL = `https://api.openweathermap.org/data/2.5/weather?q=Vancouver&appid=b2d920699bdff95168ac769bec7938de`;
-  const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=Vancouver&id=524901&appid=dcb32574b550d9e3caafbfc925539c4b`;
+  // const currentURL = `https://api.openweathermap.org/data/2.5/weather?q=Vancouver&appid=b2d920699bdff95168ac769bec7938de`;
+  // const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=Vancouver&id=524901&appid=dcb32574b550d9e3caafbfc925539c4b`;
 
 
-  useEffect(() => {
-    axios.get(currentURL)
-      .then(async (response) => {
-        setCurrentWeather(response.data)
-      })
+  // useEffect(() => {
+  //   axios.get(currentURL)
+  //     .then(async (response) => {
+  //       setCurrentWeather(response.data)
+  //     })
 
-    axios.get(forecastURL)
-      .then(async response => {
-        setForecast(response.data)
-        // console.log(response);
-      })
+  //   axios.get(forecastURL)
+  //     .then(async response => {
+  //       setForecast(response.data)
+  //       // console.log(response);
+  //     })
 
-    Promise.all([currentURL, forecastURL])
-      .then(async (response) => {
-        const weatherResponse = await response[0].json();
-        const forecastResponse = await response[1].json();
+  //   Promise.all([currentURL, forecastURL])
+  //     .then(async (response) => {
+  //       const weatherResponse = await response[0].json();
+  //       const forecastResponse = await response[1].json();
 
-        setCurrentWeather({...weatherResponse})
-        setForecast({...forecastResponse})
-      })
-      .catch((err) => console.log(err))      
-  }, [])
+  //       setCurrentWeather({...weatherResponse})
+  //       setForecast({...forecastResponse})
+  //     })
+  //     .catch((err) => console.log(err))      
+  // }, [])
 
-  console.log(currentWeather);
-  console.log(forecast);
+  // console.log(currentWeather);
+  // console.log(forecast);
   // console.log(forecast.list[0].main.temp);
 
 
@@ -62,11 +61,11 @@ function App() {
         <Route path="/almaty" element={<Almaty />} />
       </Routes>
       <br></br>
-      {/* <Main /> */}
+      <Main />
       
-      <p>{currentWeather.name}</p>
+      {/* <p>{currentWeather.name}</p>
       <p>Current temperature: {currentWeather.main.temp}</p>
-      <p>Forecast temperature for tomorrow: {forecast.list[0].main.temp}</p>
+      <p>Forecast temperature for tomorrow: {forecast.list[0].main.temp}</p> */}
     </>
   );
 }
