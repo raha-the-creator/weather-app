@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar-cont">
-      <Link to="/" style={{textDecoration: 'none'}} activeStyle={{color: '#5FB0E8'}}>
+      <Link to="/" style={{textDecoration: 'none'}}>
         <h2 className="city">VANCOUVER</h2>
       </Link>
       <Link to="/ottawa" style={{textDecoration: 'none'}}>
