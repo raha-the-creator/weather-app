@@ -10,10 +10,10 @@ const Navbar = () => {
         <h2 className="city">VANCOUVER</h2>
       </Link>
       <Link to="/ottawa" style={{textDecoration: 'none'}}>
-        <h2>OTTAWA</h2>
+        <h2 className="city">OTTAWA</h2>
       </Link>
       <Link to="/almaty" style={{textDecoration: 'none'}}>
-        <h2>ALMATY</h2>
+        <h2 className="city">ALMATY</h2>
       </Link>
     </div>
   );
